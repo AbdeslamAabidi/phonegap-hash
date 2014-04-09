@@ -11,7 +11,7 @@ This Plugin is used to generate hash (md5, sha1, sha-256, sha-384, sha-512) of a
     hash: md5, sha1, sha-256, sha-384, sha-512
 
 ## Example Usage: 
-	Example String:
+	Example String: window.hashString
 		
 ```js		
 		// md5:
@@ -25,7 +25,7 @@ This Plugin is used to generate hash (md5, sha1, sha-256, sha-384, sha-512) of a
 			console.log(params.hash + ": " + hash);
 		});	
 ```	
-	Example File:
+	Example File: window.hashFile
 ```js	
   	var params = {data: "/mnt/sdcard/helloworld.txt", hash: "md5"};
   	window.hashFile(params, function(hash) {
