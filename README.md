@@ -12,25 +12,28 @@ This Plugin is used to generate hash (md5, sha1, sha-256, sha-384, sha-512) of a
 
 ## Example Usage: 
 	Example String:
-		
+	
 		md5:
+```js		
 		var params = {data: "Hello World!", hash: "md5"};
 		window.hashString(params, function(hash) {
 			console.log(params.hash + ": " + hash);
 		});
-		
+```
 		sha-256:
+```js
 		var params = {data: "Hello World!", hash: "sh-256"};
 		window.hashString(params, function(hash) {
 			console.log(params.hash + ": " + hash);
 		});	
-	
+```	
 	Example File:
-	
+```js	
   	var params = {data: "/mnt/sdcard/helloworld.txt", hash: "md5"};
   	window.hashFile(params, function(hash) {
   		console.log(params.hash + ": " + hash);
   	});
+```
 
 ## Tests:
 This has been successfully tested on Phonegap 3.4.0-0.19.11 and Cordova 3.4.0-0.1.3
