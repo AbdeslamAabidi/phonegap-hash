@@ -149,12 +149,12 @@ typedef NS_ENUM(NSUInteger, HashType) {
 
 + (HashType) hashTypeForString:(NSString*) hashStr {
     NSString* str = hashStr.lowercaseString;
-    if		([str isEqualToString: @"md5"    ]) return md5;
-    else if ([str isEqualToString: @"sha1"	 ]) return sha1;
+    if      ([str isEqualToString: @"md5"    ]) return md5;
+    else if ([str isEqualToString: @"sha1"   ]) return sha1;
     else if ([str isEqualToString: @"sha-256"]) return sha256;
     else if ([str isEqualToString: @"sha-384"]) return sha384;
     else if ([str isEqualToString: @"sha-512"]) return sha512;
-    else 								        return unsupported;
+    else                                        return unsupported;
 }
 
 + (NSString*) hashData:(NSData*) data
@@ -182,18 +182,18 @@ typedef NS_ENUM(NSUInteger, HashType) {
         case unsupported: break; // Won't happen but clears compiler warning
     }
     
-    NSString* result = [HashPlugin upperCaseHexForDigest:digest
-                                                    size:digestSize];
+    NSString* result = [HashPlugin upperCaseHexForDigest: digest
+                                                    size: digestSize];
     
     free(digest);
     
     return result;
 }
 
-+ (NSString *) upperCaseHexForDigest:(uint8_t *)digest
-                                size:(NSUInteger) size {
++ (NSString*) upperCaseHexForDigest:(uint8_t*) digest
+                               size:(NSUInteger) size {
     
-    NSMutableString *result = [NSMutableString stringWithCapacity: size * 2];
+    NSMutableString* result = [NSMutableString stringWithCapacity: size * 2];
     
     for (NSUInteger i = 0; i < size; i++) {
         [result appendFormat: @"%02X", digest[i]];
