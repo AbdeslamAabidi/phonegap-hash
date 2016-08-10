@@ -25,4 +25,15 @@
         <source-file src="src/android/HashPlugin.java" target-dir="src/com/abdsoft/Hash/" />
     </platform>
 
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+        <feature name="Hash">
+            <param name="ios-package" value="HashPlugin"/>
+        </feature>
+        </config-file>
+        <header-file src="src/ios/HashPlugin.h" />
+        <source-file src="src/ios/HashPlugin.m" />
+    </platform>    
+
 </plugin>
