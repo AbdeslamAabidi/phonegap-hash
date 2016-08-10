@@ -171,7 +171,7 @@ typedef NS_ENUM(NSUInteger, HashType) {
         case unsupported: break; // Won't happen but clears compiler warning
     }
     
-    uint8_t* digest = malloc(sizeof(uint8_t) * CC_SHA1_DIGEST_LENGTH);
+    uint8_t* digest = malloc(sizeof(uint8_t) * digestSize);
     
     switch (hashType) {
         case md5:    CC_MD5   (data.bytes, (CC_LONG)data.length, digest); break;
