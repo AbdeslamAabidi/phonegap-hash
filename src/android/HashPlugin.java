@@ -85,9 +85,8 @@ public class HashPlugin extends CordovaPlugin
         md.update(data.getBytes());
         
     	byte[] bytes = md.digest();
-		BigInteger bi = new BigInteger(1, bytes);
 		
-		return bi.toString(16).toUpperCase();
+        return upperCaseHexForDigest(bytes);
     }
     
     private String hashFile(String data, String hash) throws NoSuchAlgorithmException, IOException 
@@ -117,8 +116,17 @@ public class HashPlugin extends CordovaPlugin
 		is.close();
     	
     	byte[] bytes = md.digest();
-		BigInteger bi = new BigInteger(1, bytes);
 		
-		return bi.toString(16).toUpperCase();
+        return upperCaseHexForDigest(bytes);
     }    
+    
+    private String upperCaseHexForDigest(byte[] digest)
+    {
+        String result = "";
+        for (byte b : digest)
+        {
+            result += String.format("%02X", b);
+        }
+        return result;
+    }
 }
