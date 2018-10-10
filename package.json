@@ -1,0 +1,29 @@
+{
+  "name": "com.abdsoft.Hash",
+  "version": "0.1.0",
+  "description": "Cordova Hash Plugin",
+  "cordova": {
+    "id": "com.abdsoft.Hash",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdsoft/phonegap-hash.git"
+  },
+  "keywords": [
+    "cordova",
+    "Hash",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Abdsoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Abdsoft/phonegap-hash/issues"
+  },
+  "homepage": "https://github.com/Abdsoft/phonegap-hash#readme"
+}
